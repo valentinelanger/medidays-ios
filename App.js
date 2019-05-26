@@ -118,7 +118,7 @@ export default class App extends Component {
   postDataToApi() {
     console.log("IN POST DATA API");
     console.log('this.state in post data', this.state.data);
-    return fetch('http://fa13aa26.ngrok.io/submit-form', {
+    return fetch('https://paddo-backend.lifen.fr/submit-form', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     flexDirection: 'column',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     fontFamily: 'Roboto-Regular',
     marginTop: 40
   },
@@ -258,8 +258,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff'
   },  
   svgHeader: {
-    marginTop: 8,
-    marginRight: 33
+    marginTop: 12
   },
   linearGradient: {
     paddingLeft: 15,
@@ -284,7 +283,7 @@ const styles = StyleSheet.create({
   },
   buttonPanel: {
     height: 150,
-    marginTop: 250
+    marginTop: 320
   },  
   buttonContainer: {
     flexDirection: 'row',
@@ -315,14 +314,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     alignContent: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     width: 374,
     height: 123,
     borderRadius: 4,
     shadowOffset:{  width: 0,  height: 2  },
     shadowColor: 'rgb(0, 45, 64)',
     shadowOpacity: 0.1,
-    backgroundColor: '#ffffff'
+    backgroundColor: '#ffffff',
+    marginLeft: 20
   }, 
   patientText: {
     alignContent: 'center',
